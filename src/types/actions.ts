@@ -13,9 +13,11 @@
  * how actions should be constructed.
  *
  * @template T the type of the action's `type` tag.
+ *
+ * // this needs to be a type, not an interface
+ * // https://github.com/microsoft/TypeScript/issues/15300
+ *
  */
-// this needs to be a type, not an interface
-// https://github.com/microsoft/TypeScript/issues/15300
 export type Action<T extends string = string> = {
   type: T
 }
